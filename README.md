@@ -121,7 +121,11 @@ make
 
 #### **5. Start the Second Instance (Obstacle/Target Generator) on Computer B**
 ```sh
-./bin/environment_simulator
+./bin/Targets publisher
+./bin/Targets subscriber
+or
+./bin/Obstacle publisher
+./bin/Obstacle subscriber
 ```
 
 
