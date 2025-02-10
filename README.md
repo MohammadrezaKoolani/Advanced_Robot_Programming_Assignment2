@@ -65,7 +65,8 @@ DDS follows a **publish/subscribe model** for efficient data exchange.
 - **Topics**: Ensure proper data binding between publishers and subscribers.
 - **DomainParticipants**: Manage all entities within a DDS **domain**.
 
-📌 **Refer to Figure on Page 12 of the PDF** for a visual representation of the DDS communication model.
+![DDS Communication Model](https://github.com/MohammadrezaKoolani/Advanced_Robot_Programming_Assignment2/blob/main/dds_model.png)
+
 
 ---
 
@@ -80,7 +81,6 @@ The communication between the two computers follows a **publish/subscribe model*
    - The second computer **subscribes** to the obstacle/target topic and updates the simulation accordingly.
    - Both computers exchange synchronization messages to ensure proper coordination.
 
-📌 **Refer to Figure on Page 18 of the PDF** for an example of Fast DDS data publishing and subscribing.
 
 ---
 
@@ -92,7 +92,8 @@ The communication between the two computers follows a **publish/subscribe model*
   - `/environment/targets` (for new targets to be reached)
   - `/environment/obstacles` (for obstacle locations)
 
-📌 **Refer to Figure on Page 26 of the PDF** for a DDS Layer Model breakdown.
+![DDS Communication Model](https://github.com/MohammadrezaKoolani/Advanced_Robot_Programming_Assignment2/blob/main/dds layer model.png)
+
 
 ---
 
@@ -123,7 +124,6 @@ make
 ./bin/environment_simulator
 ```
 
-📌 **Refer to Figure on Page 33 of the PDF** for Discovery Mechanisms in Fast DDS.
 
 ---
 
@@ -135,7 +135,7 @@ The project follows a **modular structure** similar to the first assignment, wit
 - **Blackboard Server**: Stores the shared state of the environment.
 - **Watchdog Process**: Monitors execution and ensures fault detection.
 
-📌 **Refer to Figure on Page 37 of the PDF** for a visualization of different discovery approaches.
+
 
 ---
 
