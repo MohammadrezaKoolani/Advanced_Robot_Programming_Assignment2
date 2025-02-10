@@ -92,7 +92,7 @@ The communication between the two computers follows a **publish/subscribe model*
   - `/environment/targets` (for new targets to be reached)
   - `/environment/obstacles` (for obstacle locations)
 
-![DDS Communication Model](https://github.com/MohammadrezaKoolani/Advanced_Robot_Programming_Assignment2/blob/main/dds layer model.png)
+![DDS Communication Model](https://github.com/MohammadrezaKoolani/Advanced_Robot_Programming_Assignment2/blob/main/dds_layer_model.png)
 
 
 ---
