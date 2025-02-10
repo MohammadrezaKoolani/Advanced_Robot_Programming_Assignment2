@@ -1,4 +1,3 @@
-# Advanced_Robot_Programming_Assignment2
 
 # Advanced Robot Programming - Assignment 2
 
