@@ -1,0 +1,4 @@
+/home/kisal/drone_simulator_v2/obstacle/build/CMakeFiles/Obstacles_lib.dir
+/home/kisal/drone_simulator_v2/obstacle/build/CMakeFiles/Obstacles.dir
+/home/kisal/drone_simulator_v2/obstacle/build/CMakeFiles/edit_cache.dir
+/home/kisal/drone_simulator_v2/obstacle/build/CMakeFiles/rebuild_cache.dir

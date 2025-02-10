@@ -1,0 +1,2 @@
+/usr/bin/ar qc libObstacles_lib.a CMakeFiles/Obstacles_lib.dir/Obstacles.cxx.o
+/usr/bin/ranlib libObstacles_lib.a
