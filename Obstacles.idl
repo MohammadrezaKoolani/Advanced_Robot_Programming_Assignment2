@@ -1,8 +1,0 @@
-module DroneSim {
-    struct Obstacles {
-        sequence<long> obstacles_x;
-        sequence<long> obstacles_y;
-        long obstacles_number;
-    };
-};
-
