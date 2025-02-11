@@ -1,6 +1,11 @@
 
 # Advanced Robot Programming - Assignment 2
 
+
+## Contributors
+- **Sarvenaz Ashoori - S6878764**
+- **Mohammadreza Koolani - s5467640**
+
 ## Overview
 This project is the **second assignment** for the Advanced Robot Programming course. It builds upon the **first assignment**, which involved a drone operation interactive simulator, by introducing a **distributed communication system** using **Fast DDS**.
 
