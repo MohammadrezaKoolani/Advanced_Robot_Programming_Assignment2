@@ -46,7 +46,7 @@ Stores logs generated during execution, useful for debugging and performance ana
 
 ---
 
-## Fast DDS: Detailed Explanation
+## Fast DDS: Explanation
 
 ### **What is Fast DDS?**
 Fast DDS (formerly Fast RTPS) is an **open-source** implementation of the **Data Distribution Service (DDS)** standard, developed by eProsima. It allows **real-time, high-performance, and scalable** communication between processes running on different computers or networks.
@@ -138,7 +138,9 @@ The project follows a **modular structure** similar to the first assignment, wit
 - **Obstacle/Target Generators**: Spawn and remove obstacles dynamically.
 - **Blackboard Server**: Stores the shared state of the environment.
 - **Watchdog Process**: Monitors execution and ensures fault detection.
+ in the diagram below you can see an example of Fast DDS cumunication between two systems.
 
+![DDS Communication Example](https://github.com/MohammadrezaKoolani/Advanced_Robot_Programming_Assignment2/blob/main/dds_diagram.png)
 
 
 ---
