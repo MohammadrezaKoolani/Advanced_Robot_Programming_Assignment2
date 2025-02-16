@@ -80,7 +80,7 @@ DDS follows a **publish/subscribe model** for efficient data exchange.
 - **Topics**: Ensure proper data binding between publishers and subscribers.
 - **DomainParticipants**: Manage all entities within a DDS **domain**.
 
-![DDS Communication Model](https://github.com/MohammadrezaKoolani/Advanced_Robot_Programming_Assignment2/blob/main/dds_model.png)
+![DDS Communication Model](https://github.com/MohammadrezaKoolani/Advanced_Robot_Programming_Assignment2/blob/master/dds_model.png)
 
 
 ---
@@ -107,7 +107,7 @@ The communication between the two computers follows a **publish/subscribe model*
   - `/environment/targets` (for new targets to be reached)
   - `/environment/obstacles` (for obstacle locations)
 
-![DDS Communication Model](https://github.com/MohammadrezaKoolani/Advanced_Robot_Programming_Assignment2/blob/main/dds_layer_model.png)
+![DDS Communication Model](https://github.com/MohammadrezaKoolani/Advanced_Robot_Programming_Assignment2/blob/master/dds_layer_model.png)
 
 
 ---
@@ -173,7 +173,7 @@ The project follows a **modular structure** similar to the first assignment, wit
 - **Watchdog Process**: Monitors execution and ensures fault detection.
  in the diagram below you can see an example of Fast DDS cumunication between two systems.
 
-![DDS Communication Example](https://github.com/MohammadrezaKoolani/Advanced_Robot_Programming_Assignment2/blob/main/dds_diagram1.png)
+![DDS Communication Example](https://github.com/MohammadrezaKoolani/Advanced_Robot_Programming_Assignment2/blob/master/dds_diagram1.png)
 
 
 ---
