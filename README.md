@@ -112,7 +112,14 @@ The communication between the two computers follows a **publish/subscribe model*
 
 ---
 
+## **Dependencies**
+- **Ubuntu 20.04+** or any Linux-based OS.
+- **Fast DDS** (v2.4.0 or later).
+- **CMake** (v3.10 or later).
+- **GCC/G++** (v7.5.0 or later).
+- **Ncurses library** for terminal-based display.
 
+---
 ### **Build Instructions**
 
 #### **Steps to Build the Project:**
@@ -157,8 +164,15 @@ The communication between the two computers follows a **publish/subscribe model*
 
    > *Make sure all three terminals are in the `Advanced_Robot_Programming_Assignment2` directory before running each command.*
 
----
 
+---
+## **Usage**
+Once the project is running:
+- Use arrow keys to move the drone around the environment.
+- Collect all 6 targets (displayed as numbers 1-6).
+- Avoid obstacles (displayed as `O`).
+- New targets and obstacles are dynamically generated once all targets are collected.
+---
 ## **System Architecture**  
 The ARP 2nd Assignment Drone Simulator project follows a **modular structure** with Fast DDS-based inter-process communication, enabling seamless data exchange between the drone control system and the environment generator.  
 
