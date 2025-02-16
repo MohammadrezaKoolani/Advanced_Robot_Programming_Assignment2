@@ -112,39 +112,57 @@ The communication between the two computers follows a **publish/subscribe model*
 
 ---
 
+
 ### **Build Instructions**
 
-#### **1. Install Fast DDS**
-```sh
-sudo apt install fastdds fastdds-tools
-```
+#### **Steps to Build the Project:**
 
-#### **2. Set Up the Network**
-Ensure both computers are on the same LAN.
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/MohammadrezaKoolani/Advanced_Robot_Programming_Assignment2.git
+   cd Advanced_Robot_Programming_Assignment2
+   ```
 
-#### **3. Compile the Code**
-```sh
-mkdir build && cd build
-cmake ..
-make
-```
+2. **Ensure Fast DDS is Installed:**
+   ```bash
+   sudo apt update
+   sudo apt install libfastcdr-dev libfastrtps-dev
+   ```
 
-#### **4. Start the First Instance (Drone Operator) on Computer A**
-```sh
-./bin/drone_simulator
-```
+3. **Clean Previous Builds (if any):**
+   ```bash
+   make clean
+   ```
 
-#### **5. Start the Second Instance (Obstacle/Target Generator) on Computer B**
-```sh
-./bin/Targets publisher
-./bin/Targets subscriber
-or
-./bin/Obstacle publishera
-./bin/Obstacle subscriber
-```
+4. **Compile the Project:**
+   ```bash
+   make
+   ```
 
+5. **Running the Project:**
+   Run the project in three separate terminals for each mode:
+
+   - **Publisher Terminal:**
+     ```bash
+     ./drone_simulator publisher
+     ```
+   - **Subscriber Terminal:**
+     ```bash
+     ./drone_simulator subscriber
+     ```
+   - **Display Terminal:**
+     ```bash
+     ./drone_simulator display
+     ```
+
+   > *Make sure all three terminals are in the `Advanced_Robot_Programming_Assignment2` directory before running each command.*
 
 ---
+
+
+
+
+
 
 ## **System Architecture**
 The project follows a **modular structure** similar to the first assignment, with additional DDS-based inter-computer communication. The key components are:
