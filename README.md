@@ -159,30 +159,37 @@ The communication between the two computers follows a **publish/subscribe model*
 
 ---
 
+## **System Architecture**  
+The ARP 2nd Assignment Drone Simulator project follows a **modular structure** with Fast DDS-based inter-process communication, enabling seamless data exchange between the drone control system and the environment generator.  
 
+- **Drone Control System**:  
+  Sets up the drone controls and initializes the display interface using `ncurses`. It initializes the **Fast DDS Publisher/Subscriber** to send and receive data, publishes the current drone state, subscribes to obstacle and target data, processes this data to update the drone's position and velocity, and updates the **Blackboard** with the latest state while rendering the environment.
 
+- **Environment Generator System**:  
+  Generates dynamic obstacles and targets, initializes the **Fast DDS Publisher/Subscriber**, publishes obstacle and target data, subscribes to the drone state, and processes received data to reflect changes in real-time.
 
-
-
-## **System Architecture**
-The project follows a **modular structure** similar to the first assignment, with additional DDS-based inter-computer communication. The key components are:
-- **Drone Dynamics**: Manages drone movement with forces, inertia, and damping.
-- **Fast DDS Communication**: Handles all inter-computer messaging.
-- **Obstacle/Target Generators**: Spawn and remove obstacles dynamically.
-- **Blackboard Server**: Stores the shared state of the environment.
-- **Watchdog Process**: Monitors execution and ensures fault detection.
- in the diagram below you can see an example of Fast DDS cumunication between two systems.
-
-![DDS Communication Example](https://github.com/MohammadrezaKoolani/Advanced_Robot_Programming_Assignment2/blob/master/dds_flowchaart.png)
-
+- **Blackboard Server**:  
+  Manages shared memory, providing synchronized access to the current state of the environment, ensuring all processes operate with up-to-date information.
 
 ---
 
-## **Future Improvements**
-- Implement more advanced **collision avoidance** algorithms.
-- Optimize **Fast DDS QoS settings** for improved network performance.
-- Extend to multi-agent systems for **swarm robotics simulation**.
+## **Flowchart Explanation**  
+The flowchart below illustrates the entire execution flow of the project:  
+- **Initialization** sets up both the **Drone Control System** and the **Environment Generator System**.  
+- Each system initializes its **Fast DDS components** and starts publishing data.  
+- The **publish/subscribe model** allows bidirectional data flow between the systems, with the **Blackboard** acting as the central point for data storage and updates.  
+- The process runs in a loop until the user exits or all targets are collected.
 
-## **Conclusion**
-This assignment successfully integrates **Fast DDS** to enable real-time distributed simulation. By leveraging a **publish/subscribe model**, the system allows seamless **data exchange** between multiple computers, enhancing the interactivity and scalability of the drone simulator.
+![Updated DDS Flowchart](https://github.com/MohammadrezaKoolani/Advanced_Robot_Programming_Assignment2/blob/master/dds_flowchaart.png)
 
+---
+
+## **Future Improvements**  
+- Implement more advanced **collision avoidance algorithms** for smoother drone navigation.  
+- Optimize **Fast DDS QoS settings** for better network performance and reduced latency.  
+- Extend the architecture to support **multi-agent systems**, enabling simulations with multiple drones for **swarm robotics**.
+
+---
+
+## **Conclusion**  
+This project successfully integrates **Fast DDS** to enable real-time distributed simulation. By leveraging a **publish/subscribe model**, the system achieves seamless **data exchange** between multiple processes, enhancing the **interactivity, scalability, and modularity** of the drone simulator.
