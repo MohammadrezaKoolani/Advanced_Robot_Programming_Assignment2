@@ -22,32 +22,42 @@ The second assignment focuses on **distributed drone simulation** across two com
 - **Logging, watchdog, and parameter files** as per the first assignment’s specifications.
 
 ## Project Structure
-The project consists of several key directories and files:
+The ARP 2nd Assignment Drone Simulator project is organized into several key directories and files:
 
 ### **1. `src/` (Source Code Directory)**
-Contains the core implementation files:
-- `drone_simulator.cpp`: The main program for controlling the drone.
-- `obstacle_generator.cpp`: Generates dynamic obstacles using DDS.
-- `target_generator.cpp`: Spawns new targets in the environment.
-- `dds_communication.cpp`: Handles DDS communication for transmitting and receiving messages.
+- `main.c`: The main program handling three modes (`publisher`, `subscriber`, and `display`) using command-line arguments.
+- `blackboard.c`: Implements the shared blackboard for storing and synchronizing drone, obstacle, and target data.
+- `dds_publisher.cpp`: Publishes obstacles and targets using Fast DDS.
+- `dds_subscriber.cpp`: Subscribes to obstacle and target data using Fast DDS and updates the blackboard.
+- `drone.c`: Implements drone movement, collision detection, and interaction with the blackboard.
+- `ObstaclesPubSubTypes.cxx`, `TargetsPubSubTypes.cxx`: Auto-generated files from IDL definitions for Fast DDS serialization.
+- `ObstaclesTypeObjectSupport.cxx`, `TargetsTypeObjectSupport.cxx`: Additional Fast DDS type support files.
 
 ### **2. `include/` (Header Files Directory)**
-Includes necessary headers:
-- `drone_simulator.h`: Definitions and drone movement logic.
-- `dds_communication.h`: Interface for DDS setup and communication.
-- `obstacle_generator.h`: Functions for obstacle placement.
-- `target_generator.h`: Target generation logic.
+- `blackboard.h`: Defines the `Blackboard` structure and functions for shared memory management.
+- `dds_publisher.h`: Declares the `DDSPublisher` class and its methods for Fast DDS communication.
+- `dds_subscriber.h`: Declares the `DDSSubscriber` class and its methods for Fast DDS communication.
+- `globals.h`: Declares global variables and constants used throughout the project.
 
-### **3. `dds_files/` (Fast DDS Configuration and IDL Files)**
-- `Obstacles.idl`: Defines the DDS data structure for obstacles.
-- `Targets.idl`: Defines the DDS data structure for targets.
-- `dds_config.xml`: Configuration file for Fast DDS settings.
+### **3. `idl_files/` (Fast DDS IDL Files)**
+- `Obstacles.idl`: Defines the data structure for obstacles in DDS.
+- `Targets.idl`: Defines the data structure for targets in DDS.
+*Note: DDS code is generated from these IDL files and manually moved to the `src/` directory for compilation.*
 
 ### **4. `bin/` (Compiled Executables)**
-Contains compiled versions of the source files.
+- `drone_simulator`: The main executable, which can be run in `publisher`, `subscriber`, or `display` mode using command-line arguments.
 
 ### **5. `log/` (Execution Logs and Debugging)**
-Stores logs generated during execution, useful for debugging and performance analysis.
+- `position_log.txt`: Logs the drone’s position over time for analysis and debugging.
+
+### **6. `Makefile`**
+- Automates the compilation process, including:
+  - Compiling all `.c`, `.cpp`, and `.cxx` source files.
+  - Linking with the required Fast DDS libraries.
+  - Providing `make`, `make clean`, and `make all` targets for building the project.
+
+---
+
 
 ---
 
@@ -102,7 +112,7 @@ The communication between the two computers follows a **publish/subscribe model*
 
 ---
 
-### **How to Install and Run the System**
+### **Build Instructions**
 
 #### **1. Install Fast DDS**
 ```sh
