@@ -173,7 +173,7 @@ The project follows a **modular structure** similar to the first assignment, wit
 - **Watchdog Process**: Monitors execution and ensures fault detection.
  in the diagram below you can see an example of Fast DDS cumunication between two systems.
 
-![DDS Communication Example](https://github.com/MohammadrezaKoolani/Advanced_Robot_Programming_Assignment2/blob/master/dds_diagram1.png)
+![DDS Communication Example](https://github.com/MohammadrezaKoolani/Advanced_Robot_Programming_Assignment2/blob/master/dds_flowchaart.png)
 
 
 ---
